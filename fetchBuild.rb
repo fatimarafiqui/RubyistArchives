@@ -29,8 +29,6 @@ def fetchBuild
 
   temp = rand(300)
   insertDB(temp)
-  pp temp
-
 end
 
 def run
@@ -40,8 +38,8 @@ def run
   if !databases.include? db
     $influxdb.create_database(db)
   end
-  while 1 do
+  while 1 do #instead use cronjob
     fetchBuild
-    sleep(5)
+    sleep(15)
   end
 end
