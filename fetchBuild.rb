@@ -1,8 +1,5 @@
 require 'influxdb'
 require 'open-uri'
-require 'rubygems'
-require 'json'
-require 'pp'
 require "net/http"
 require "uri"
 require 'time'
